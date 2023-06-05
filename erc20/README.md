@@ -13,11 +13,11 @@ This project was developed using the [Intellij Community](https://www.jetbrains.
 <hr>
 
 ## Table of Contents<br>
-- [Environment](https://github.com/gcp-development/erc20/blob/main/README.md#environment)
-- [Test cases](https://github.com/gcp-development/erc20/blob/main/README.md#test-cases)
-- [Build](https://github.com/gcp-development/erc20/blob/main/README.md#build)
-- [Deploy via command-line](https://github.com/gcp-development/erc20/blob/main/README.md#deploy-via-command-line)
-- [Deploy via browser](https://github.com/gcp-development/erc20/blob/main/README.md#deploy-via-browser)
+- [Environment](https://github.com/gcp-development/smart-contract-dapp/blob/main/erc20/README.md#environment)
+- [Test cases](https://github.com/gcp-development/smart-contract-dapp/blob/main/erc20/README.md#test-cases)
+- [Build](https://github.com/gcp-development/smart-contract-dapp/blob/main/erc20/README.md#build)
+- [Deploy via command-line]
+- [Deploy via browser]
 
 <hr>
 
