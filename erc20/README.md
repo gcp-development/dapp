@@ -117,6 +117,7 @@ Upload and Instantiate the Contract
 
 ![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/cec8fe5b-26af-4999-bee5-d3d41a0f20cb)
 
+![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/be96e2ec-99a1-4e4c-8754-5a37b4cc8dfd)
 
 
 References:<br/>
