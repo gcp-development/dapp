@@ -18,7 +18,6 @@ This project was developed using the [Intellij Community](https://www.jetbrains.
 - [Build](https://github.com/gcp-development/smart-contract-dapp/blob/main/erc20/README.md#build)
 - [Deploy to the Shibuya Astar]
 
-
 <hr>
 
 ### Environment
@@ -105,7 +104,9 @@ There are three ways of deploying our smart contract:
  
 For this example we are going to use the Contracts Substrate UI, but before we proceed we need to get some [faucets](https://portal.astar.network/) for the Shibuya-Testnet. For managing our dev account we are going to use the [polkadot-js-browser-extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadot-js-browser-extension).
 
+Open the [Contracts Substrate UI](https://contracts-ui.substrate.io/?rpc=wss://rpc.shibuya.astar.network)
 
+![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/f72640b4-e0f7-45e0-b787-85738af159f1)
 
 
 References:<br/>
