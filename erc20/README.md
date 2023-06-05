@@ -108,6 +108,10 @@ Open the [Contracts Substrate UI](https://contracts-ui.substrate.io/?rpc=wss://r
 
 ![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/f72640b4-e0f7-45e0-b787-85738af159f1)
 
+Upload and Instantiate the Contract
+
+![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/45de5883-ee74-46da-87ab-8dfbc9a44de2)
+
 
 References:<br/>
 [ERC-20 implementation](https://github.com/paritytech/ink-examples/tree/main/erc20)<br/>
