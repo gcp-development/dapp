@@ -122,3 +122,4 @@ Sign the transaction
 
 References:<br/>
 [ERC-20 implementation](https://github.com/paritytech/ink-examples/tree/main/erc20)<br/>
+[Astar Docs](https://docs.astar.network/)
