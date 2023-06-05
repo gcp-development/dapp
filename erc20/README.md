@@ -16,8 +16,8 @@ This project was developed using the [Intellij Community](https://www.jetbrains.
 - [Environment](https://github.com/gcp-development/smart-contract-dapp/blob/main/erc20/README.md#environment)
 - [Test cases](https://github.com/gcp-development/smart-contract-dapp/blob/main/erc20/README.md#test-cases)
 - [Build](https://github.com/gcp-development/smart-contract-dapp/blob/main/erc20/README.md#build)
-- [Deploy via command-line]
-- [Deploy via browser]
+- [Deploy to the Shibuya Astar]
+
 
 <hr>
 
@@ -95,6 +95,14 @@ target
 ![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/a2fcd86f-4e6f-48b7-8c57-5aac8993b53b)
 
 <hr>
+
+### Deploy to the Shibuya Astar
+
+There are three ways of deploying our smart contract:command line;[Shibuya Testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.shibuya.astar.network#/contracts) and the [Contracts Substrate UI](https://contracts-ui.substrate.io/?rpc=wss://rpc.shibuya.astar.network). We are going to use the Contracts Substrate UI for this example.Before we proceed we need to get some [faucets](https://portal.astar.network/shibuya-testnet/assets) for the Shibuya-Testnet.
+
+
+
+
 
 References:<br/>
 [ERC-20 implementation](https://github.com/paritytech/ink-examples/tree/main/erc20)<br/>
