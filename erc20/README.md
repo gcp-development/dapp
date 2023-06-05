@@ -103,7 +103,7 @@ There are three ways of deploying our smart contract:
 - using the [Shibuya Testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.shibuya.astar.network#/contracts) portal.
 - using the [Contracts Substrate UI](https://contracts-ui.substrate.io/?rpc=wss://rpc.shibuya.astar.network). 
  
-For this example we are going to use the Contracts Substrate UI, but before we proceed we need to get some [faucets](https://portal.astar.network/shibuya-testnet/assets) for the Shibuya-Testnet.
+For this example we are going to use the Contracts Substrate UI, but before we proceed we need to get some [faucets](https://portal.astar.network/) for the Shibuya-Testnet.
 
 
 
