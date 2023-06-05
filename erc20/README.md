@@ -1,5 +1,4 @@
-# erc20
-ERC-20 Token Standard
+# ERC-20 Token Standard
 
 It's assumed that these software are installed and running:
 
