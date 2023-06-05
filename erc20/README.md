@@ -92,3 +92,6 @@ A Wasm binary(erc20.wasm), a metadata file (metadata.json/which contains the con
 ![image](https://github.com/gcp-development/erc20/assets/76512851/5c445cea-4146-45a9-91d7-70e05bcba0a5)
 
 <hr>
+
+References:<br/>
+[ERC-20 implementation](https://github.com/paritytech/ink-examples/tree/main/erc20)<br/>
