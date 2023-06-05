@@ -15,7 +15,6 @@ This project was developed using the [Intellij Community](https://www.jetbrains.
 ## Table of Contents<br>
 - [Environment](https://github.com/gcp-development/erc20/blob/main/README.md#environment)
 - [Test cases](https://github.com/gcp-development/erc20/blob/main/README.md#test-cases)
-- [Create an account](https://github.com/gcp-development/erc20/blob/main/README.md#create-an-account)
 - [Build](https://github.com/gcp-development/erc20/blob/main/README.md#build)
 - [Deploy via command-line](https://github.com/gcp-development/erc20/blob/main/README.md#deploy-via-command-line)
 - [Deploy via browser](https://github.com/gcp-development/erc20/blob/main/README.md#deploy-via-browser)
