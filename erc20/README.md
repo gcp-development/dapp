@@ -52,7 +52,8 @@ The directory will be assigned with a Rust toolchain with [rustup override](http
 ```bash
 rustup show
 ```
-![image](https://github.com/gcp-development/erc20/assets/76512851/ea146adb-9414-4b17-8c52-200994740bf7)
+
+![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/1708fa72-5b6b-42ad-b618-f1e0a5613185)
 
 Note:The nightly-2023-02-09 is set by the [rust-toolchain.toml](https://github.com/gcp-development/erc20/blob/main/rust-toolchain.toml) file.
 
@@ -65,7 +66,7 @@ Run the test cases for the  contract
 cargo test
 ```
 
-![image](https://github.com/gcp-development/erc20/assets/76512851/18d2368e-aed9-45c5-9808-5eedf15cbcbe)
+![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/4e92c092-1d00-4ff8-827f-50e0ca5fa786)
 
 <hr>
 
@@ -76,7 +77,7 @@ Build the contract
 cargo contract build
 ```
 
-![image](https://github.com/gcp-development/erc20/assets/76512851/be915f99-795c-408f-b531-c4068036c606)
+![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/402b61c4-5e79-4ede-99a3-2672beac5fb9)
 
 In the target folder we should have these files:
 ```bash
@@ -88,7 +89,7 @@ target
 ```
 A Wasm binary(erc20.wasm), a metadata file (metadata.json/which contains the contract's [ABI](https://use.ink/basics/metadata#abi)) and the contract file(erc20.contract/which we will deploy to our chain).
 
-![image](https://github.com/gcp-development/erc20/assets/76512851/5c445cea-4146-45a9-91d7-70e05bcba0a5)
+![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/a2fcd86f-4e6f-48b7-8c57-5aac8993b53b)
 
 <hr>
 
