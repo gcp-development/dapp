@@ -85,12 +85,12 @@ target
   └─ ink
     └─ erc20.contract
     └─ erc20.wasm
-    └─ metadata.json
+    └─ erc20.json
 ```
 
 - erc20.contract (contract bundle)
 - erc20.wasm ([WASM binary](https://webassembly.org/))
-- metadata.json ([ABI](https://use.ink/basics/metadata#abi))
+- erc20.json ([ABI](https://use.ink/basics/metadata#abi))
 
 ![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/a2fcd86f-4e6f-48b7-8c57-5aac8993b53b)
 
