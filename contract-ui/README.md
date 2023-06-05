@@ -12,3 +12,9 @@ List installed versions.
 ```bash
 nvm ls
 ```
+
+![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/8c308535-aa61-416e-8d5c-f1f372f92e33)
+
+References:<br>
+[Using a node version manager](https://npm.github.io/installation-setup-docs/installing/using-a-node-version-manager.html)<br>
+[npm Docs](https://docs.npmjs.com/)<br>
