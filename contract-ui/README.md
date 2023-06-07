@@ -21,7 +21,7 @@ nvm use 20.2.0
 npx create-react-app contract-ui --template typescript
 cd contract-ui
 npm i -D prettier eslint-config-prettier eslint-plugin-prettier
-npm i next
+npm i useink
 ```
 
 To run the project.

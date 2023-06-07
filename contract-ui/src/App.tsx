@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import HomePage from "./components/HomePage";
+
+import { UseInkProvider } from 'useink';
+import { ShibuyaTestnet } from 'useink/chains';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<UseInkProvider 
+      config={{ 
+        dappName: 'ERC-20', 
+        chains: [ShibuyaTestnet] ,
+        caller: {
+          // DEV default caller address to be used before a user connects their wallet.
+          default: "5FNXJqU9i14rxvsmfCihVLFeDs68VZPjvqNqwMkGvfX9xiWT", 
+        }
+      }}
+    >
+    <HomePage></HomePage>
+    </UseInkProvider>
   );
 }
 
