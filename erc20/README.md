@@ -73,7 +73,7 @@ cargo test
 
 Build the contract
 ```bash
-cargo contract build
+cargo contract build --release
 ```
 
 ![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/402b61c4-5e79-4ede-99a3-2672beac5fb9)
