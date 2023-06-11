@@ -31,3 +31,4 @@ npx react-native run-android
 References:<br>
 [Using a node version manager](https://npm.github.io/installation-setup-docs/installing/using-a-node-version-manager.html)<br>
 [npm Docs](https://docs.npmjs.com/)<br>
+[React Native](https://reactnative.dev/)<br>
