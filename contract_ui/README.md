@@ -13,6 +13,8 @@ List installed versions.
 nvm ls
 ```
 
+![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/418ffa7d-0802-490a-a133-396e0da2a2f6)
+
 To create a similar project.
 ```bash
 nvm use 20.2.0
