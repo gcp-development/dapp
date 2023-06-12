@@ -19,6 +19,7 @@ To create a similar project.
 ```bash
 nvm use 20.2.0
 npx react-native init contract_ui
+npm install @rneui/themed @rneui/base
 ```
 Note: When we create a new React Native app(0.71 version) via the React Native CLI we will get a [TypeScript app by default](https://reactnative.dev/blog/2023/01/12/version-071).
 
@@ -27,6 +28,7 @@ To run the project.
 cd contract_ui
 npx react-native start
 npx react-native run-android
+
 ```
 <hr>
 
