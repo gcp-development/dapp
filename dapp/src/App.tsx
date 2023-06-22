@@ -1,7 +1,8 @@
 import { WsProvider,ApiPromise } from '@polkadot/api';
 import { web3Accounts,web3Enable, web3FromAddress } from '@polkadot/extension-dapp';
 import { InjectedAccountWithMeta } from "@polkadot/extension-inject/types"
-import BN from 'bn.js';
+import { BN,formatBalance } from '@polkadot/util';
+//import BN from 'bn.js';
 import { ChangeEvent, useEffect,useState } from 'react';
 
 const NAME="RococoContracts";
@@ -77,6 +78,7 @@ const App=()=> {
   
 
   useEffect(()=>{
+    formatBalance.setDefaults({ unit: 'ROC' });
     setup();
   },[]);
 
@@ -96,7 +98,7 @@ const App=()=> {
       //RPC calls
       const chainName = await api.rpc.system.chain();
       console.log("Chain Name: " + chainName.toPrimitive());
-
+   
     })();
 
   },[api]);
@@ -134,7 +136,7 @@ const App=()=> {
 
      {selectedAccount ? <>
      <button onClick={onClickTransaction}>Transfer 0.05 ROC from {selectedAccount.address} to 5Ev7FnAcuNwoPRF1Txb5YvyjMCeuBaMh8tHzcMqGYrCa3ZFe</button>
-     <span>Balance:{balance?.toString()}</span>
+     <span>Balance:{formatBalance(balance, { withSiFull: true })}</span>
      </> :null}
 
     </div>
