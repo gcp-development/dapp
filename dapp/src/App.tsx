@@ -1,6 +1,7 @@
 import { WsProvider,ApiPromise } from '@polkadot/api';
-import { web3Accounts,web3Enable } from '@polkadot/extension-dapp';
+import { web3Accounts,web3Enable, web3FromAddress } from '@polkadot/extension-dapp';
 import { InjectedAccountWithMeta } from "@polkadot/extension-inject/types"
+import BN from 'bn.js';
 import { ChangeEvent, useEffect,useState } from 'react';
 
 const NAME="RococoContracts";
@@ -9,6 +10,7 @@ const App=()=> {
   const[api,setApi]= useState<ApiPromise>();
   const[accounts,setAccountsList]= useState<InjectedAccountWithMeta[]>([]);
   const[selectedAccount,setSelectedAccount]= useState<InjectedAccountWithMeta>();
+  const[balance,setBalance]= useState<BN>();
 
   //parachainInfo.parachainId
   //const[paraChainInfo,setParaChainInfo]= useState(0);
@@ -49,6 +51,30 @@ const App=()=> {
     setSelectedAccount(address);
   };
 
+  const onClickTransaction = async () => {
+
+    const toAddress = "5Ev7FnAcuNwoPRF1Txb5YvyjMCeuBaMh8tHzcMqGYrCa3ZFe";
+    //The API interfaces, only deal with u128 values. "1,000,000,000,000"
+    const AMOUNT = new BN(1).mul(new BN(10).pow(new BN(12)));
+
+    if(!api) return;
+
+
+    if(!selectedAccount) return;
+
+    const injector= await web3FromAddress(selectedAccount.address);
+
+    //Extrinsic call
+    const txHash = await api.tx.balances.transfer(toAddress, AMOUNT)
+    .signAndSend(selectedAccount.address,
+      {
+        signer:injector.signer
+      }
+      );
+
+      console.log(txHash);
+  };
+  
 
   useEffect(()=>{
     setup();
@@ -64,8 +90,6 @@ const App=()=> {
       const now = await api.query.timestamp.now();
       console.log(now.toPrimitive());
 
-      //const { nonce, data: balance } = await api.query.system.account(address);
-
       const parachainId = await api.query.parachainInfo.parachainId();
       console.log("Parachain Id: " + parachainId.toPrimitive());
 
@@ -76,6 +100,18 @@ const App=()=> {
     })();
 
   },[api]);
+
+  useEffect(() => {
+    if(!api) return;
+
+    if(!selectedAccount) return;
+
+    api.query.system.account(selectedAccount.address,({data:{free}}:{data:{free:BN}})=>{
+      setBalance(free)
+    })
+
+  },[api,selectedAccount]);
+
 
   return (
     <div style={styles.container}>
@@ -90,13 +126,16 @@ const App=()=> {
           Choose one
         </option>
         {accounts.map((account)=>(
-        <option key={account.address} value={account.address}>{account.address}</option>
+        <option key={account.address} value={account.address}>{account.meta.name || account.address}</option>
         ))}
         </select>
       </>
     ):null}
 
-     {selectedAccount ? <>{selectedAccount.address}</> :null}
+     {selectedAccount ? <>
+     <button onClick={onClickTransaction}>Transfer 0.05 ROC from {selectedAccount.address} to 5Ev7FnAcuNwoPRF1Txb5YvyjMCeuBaMh8tHzcMqGYrCa3ZFe</button>
+     <span>Balance:{balance?.toString()}</span>
+     </> :null}
 
     </div>
   );
