@@ -21,7 +21,7 @@ nvm use 20.2.0
 npx create-react-app dapp --template typescript
 cd dapp
 npm i -D prettier eslint-config-prettier eslint-plugin-prettier
-npm i @polkadot/api @polkadot/extension-dapp @polkadot/extension-inject @polkadot/ui-util @polkadot/api-contract
+npm i @polkadot/api @polkadot/extension-dapp @polkadot/extension-inject @polkadot/util @polkadot/api-contract
 ```
 
 To run the project.
