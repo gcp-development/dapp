@@ -1,11 +1,24 @@
 import { WsProvider,ApiPromise } from '@polkadot/api';
 import { web3Accounts,web3Enable, web3FromAddress } from '@polkadot/extension-dapp';
 import { InjectedAccountWithMeta } from "@polkadot/extension-inject/types"
-import { BN,formatBalance } from '@polkadot/util';
-//import BN from 'bn.js';
+import { BN, BN_ONE, formatBalance } from '@polkadot/util';
 import { ChangeEvent, useEffect,useState } from 'react';
+import { ContractPromise } from '@polkadot/api-contract';
+import type { WeightV2 } from '@polkadot/types/interfaces'
+
+import abi from './abi/erc20.json';
 
 const NAME="RococoContracts";
+
+const MAX_CALL_WEIGHT = new BN(5_000_000_000_000).isub(BN_ONE);
+const PROOFSIZE = new BN(1_000_000);
+
+
+const CONTRACT_ADDRESS="5DWNgGWW63qgN9YEEAni7KwNgTcbbNoqd673PXdH6BptMmX4";
+const DEV_ACCOUNT_I_ADDRESS="5FNXJqU9i14rxvsmfCihVLFeDs68VZPjvqNqwMkGvfX9xiWT";
+const DEV_ACCOUNT_II_ADDRESS="5Ev7FnAcuNwoPRF1Txb5YvyjMCeuBaMh8tHzcMqGYrCa3ZFe";
+
+
 
 const App=()=> {
   const[api,setApi]= useState<ApiPromise>();
@@ -13,16 +26,46 @@ const App=()=> {
   const[selectedAccount,setSelectedAccount]= useState<InjectedAccountWithMeta>();
   const[balance,setBalance]= useState<BN>();
 
-  //parachainInfo.parachainId
-  //const[paraChainInfo,setParaChainInfo]= useState(0);
-
-
   const setup = async() => {
     const wsProvider=new WsProvider("wss://rococo-contracts-rpc.polkadot.io");
     const api = new ApiPromise({ provider: wsProvider });
     await api.isReady;
     console.log("The api is ready.");
     setApi(api);
+
+    formatBalance.setDefaults({ unit: 'ROC' });
+
+    const contract = new ContractPromise(api,abi, CONTRACT_ADDRESS);
+    const storageDepositLimit=null;
+
+    //const gasLimit = api.registry.createType('WeightV2', { refTime: 3912368128, proofSize: 131072 });
+
+    //const callValue = await contract.query.balanceOf(DEV_ACCOUNT_I_ADDRESS, { gasLimit: -1 }, DEV_ACCOUNT_II_ADDRESS);
+
+    
+
+    const callValue = await contract.query.totalSupply(DEV_ACCOUNT_I_ADDRESS, {
+      gasLimit:api?.registry.createType('WeightV2', {
+        refTime: MAX_CALL_WEIGHT,
+        proofSize: PROOFSIZE,
+      }) as WeightV2,
+      storageDepositLimit,
+    });
+
+    if (callValue.result.isOk) {
+      if(callValue.output!=null)
+        console.log('Success', callValue.output.toHuman());
+    } else {
+      console.error('Error', callValue.result.asErr.toRawType());
+    }
+/*
+    //console.log(callValue.result);
+    console.log('BUUULLLCCCRRRAAAPPP');
+    console.log(callValue.result.isOk.valueOf());
+    console.log(callValue.result.asErr.isEmpty);
+    console.log(callValue.result.asErr.toRawType());
+    console.log('BUUULLLCCCRRRAAAPPP');
+*/
   };
 
   const onClickConnection = async () => {
@@ -78,8 +121,8 @@ const App=()=> {
   
 
   useEffect(()=>{
-    formatBalance.setDefaults({ unit: 'ROC' });
     setup();
+    
   },[]);
 
 
