@@ -12,13 +12,9 @@ const NAME="RococoContracts";
 
 const MAX_CALL_WEIGHT = new BN(5_000_000_000_000).isub(BN_ONE);
 const PROOFSIZE = new BN(1_000_000);
-
-
 const CONTRACT_ADDRESS="5DWNgGWW63qgN9YEEAni7KwNgTcbbNoqd673PXdH6BptMmX4";
 const DEV_ACCOUNT_I_ADDRESS="5FNXJqU9i14rxvsmfCihVLFeDs68VZPjvqNqwMkGvfX9xiWT";
 const DEV_ACCOUNT_II_ADDRESS="5Ev7FnAcuNwoPRF1Txb5YvyjMCeuBaMh8tHzcMqGYrCa3ZFe";
-
-
 
 const App=()=> {
   const[api,setApi]= useState<ApiPromise>();
@@ -38,12 +34,15 @@ const App=()=> {
     const contract = new ContractPromise(api,abi, CONTRACT_ADDRESS);
     const storageDepositLimit=null;
 
+    //const value = 10000; 
+    const VALUE = 0.0000000000005;
+    
+
     //const gasLimit = api.registry.createType('WeightV2', { refTime: 3912368128, proofSize: 131072 });
 
     //const callValue = await contract.query.balanceOf(DEV_ACCOUNT_I_ADDRESS, { gasLimit: -1 }, DEV_ACCOUNT_II_ADDRESS);
-
     
-
+/*
     const callValue = await contract.query.totalSupply(DEV_ACCOUNT_I_ADDRESS, {
       gasLimit:api?.registry.createType('WeightV2', {
         refTime: MAX_CALL_WEIGHT,
@@ -58,13 +57,86 @@ const App=()=> {
     } else {
       console.error('Error', callValue.result.asErr.toRawType());
     }
-/*
-    //console.log(callValue.result);
-    console.log('BUUULLLCCCRRRAAAPPP');
-    console.log(callValue.result.isOk.valueOf());
-    console.log(callValue.result.asErr.isEmpty);
-    console.log(callValue.result.asErr.toRawType());
-    console.log('BUUULLLCCCRRRAAAPPP');
+
+          {
+        gasLimit: api?.registry.createType('WeightV2', {
+          refTime: MAX_CALL_WEIGHT,
+          proofSize: PROOFSIZE,
+        }) as WeightV2,
+        storageDepositLimit,
+      },
+*/
+
+    const { gasRequired } = await contract.query.transfer(
+      DEV_ACCOUNT_I_ADDRESS,
+      {
+        gasLimit: api?.registry.createType('WeightV2', {
+          refTime: MAX_CALL_WEIGHT,
+          proofSize: PROOFSIZE,
+        }) as WeightV2,
+        storageDepositLimit,
+      },
+      DEV_ACCOUNT_II_ADDRESS,
+      0,
+    );
+
+    console.log('gasRequired:', gasRequired);
+
+    /*
+
+   const gasLimit = api?.registry.createType('WeightV2', gasRequired) as WeightV2
+   
+await contract.tx
+  .flip({
+    gasLimit,
+    storageDepositLimit
+  })
+  .signAndSend(alice, async (res) => {
+    if (res.status.isInBlock) {
+      console.log('in a block')
+    } else if (res.status.isFinalized) {
+      console.log('finalized')
+    }
+  });
+
+
+
+    const tx = await contract.tx.transferFrom(DEV_ACCOUNT_I_ADDRESS, DEV_ACCOUNT_II_ADDRESS, {
+    gasLimit:api?.registry.createType('WeightV2', {
+      refTime: MAX_CALL_WEIGHT,
+      proofSize: PROOFSIZE,
+    }) as WeightV2,
+    storageDepositLimit,
+  });
+
+
+
+  .signAndSend(alicePair, result => {
+    if (result.status.isInBlock) {
+      console.log('in a block');
+    } else if (result.status.isFinalized) {
+      console.log('finalized');
+    }
+  });
+
+    const gasLimit = api.registry.createType('WeightV2', gasRequired) as WeightV2
+
+    // Send the transaction, like elsewhere this is a normal extrinsic
+    // with the same rules as applied in the API (As with the read example,
+    // additional params, if required can follow)
+    await contract.tx
+      .flip({
+        gasLimit: gasLimit,
+        storageDepositLimit
+      })
+      .signAndSend(account, async (res) => {
+        if (res.status.isInBlock) {
+          console.log('in a block')
+        } else if (res.status.isFinalized) {
+          console.log('finalized')
+        }
+      })
+
 */
   };
 
