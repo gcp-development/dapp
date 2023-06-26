@@ -1,7 +1,7 @@
 import { WsProvider,ApiPromise } from '@polkadot/api';
 import { web3Accounts,web3Enable, web3FromAddress } from '@polkadot/extension-dapp';
 import { InjectedAccountWithMeta } from "@polkadot/extension-inject/types"
-import { BN, BN_ONE, formatBalance } from '@polkadot/util';
+import { BN, BN_ONE,BN_TWO, formatBalance } from '@polkadot/util';
 import { ChangeEvent, useEffect,useState } from 'react';
 import { ContractPromise } from '@polkadot/api-contract';
 import type { WeightV2 } from '@polkadot/types/interfaces'
@@ -10,8 +10,6 @@ import abi from './abi/erc20.json';
 
 const NAME="RococoContracts";
 
-const MAX_CALL_WEIGHT = new BN(5_000_000_000_000).isub(BN_ONE);
-const PROOFSIZE = new BN(1_000_000);
 const CONTRACT_ADDRESS="5DWNgGWW63qgN9YEEAni7KwNgTcbbNoqd673PXdH6BptMmX4";
 const DEV_ACCOUNT_I_ADDRESS="5FNXJqU9i14rxvsmfCihVLFeDs68VZPjvqNqwMkGvfX9xiWT";
 const DEV_ACCOUNT_II_ADDRESS="5Ev7FnAcuNwoPRF1Txb5YvyjMCeuBaMh8tHzcMqGYrCa3ZFe";
@@ -32,17 +30,102 @@ const App=()=> {
     formatBalance.setDefaults({ unit: 'ROC' });
 
     const contract = new ContractPromise(api,abi, CONTRACT_ADDRESS);
-    const storageDepositLimit=null;
 
-    //const value = 10000; 
-    const VALUE = 0.0000000000005;
+    //get the Weights V2 from the chain
+    // @ts-ignore
+    const maxBlock = api.consts.system.blockWeights.maxBlock //as unknown as WeightV2
+    console.log("WeightV2: " + maxBlock);
+
+    const storageDepositLimit=null;
+    const VALUE =new BN(0.0000000000005);
+
+    const injector= await web3FromAddress(DEV_ACCOUNT_I_ADDRESS);
+
+    //dry-run
+    const { gasRequired, storageDeposit, result } = await contract.query.transfer(
+      DEV_ACCOUNT_I_ADDRESS,
+      {
+        gasLimit: api?.registry.createType('WeightV2', maxBlock) as WeightV2,
+        storageDepositLimit,
+      },
+      DEV_ACCOUNT_II_ADDRESS,
+      VALUE,
+    );
+
+    if (result.isOk) {
+      console.log('gasRequired', gasRequired.toHuman());
+      console.log('storageDeposit', storageDeposit.toHuman());
+
+      const estimatedGas = api.registry.createType(
+        'WeightV2',
+        {
+          refTime: gasRequired.refTime.toBn().mul(BN_TWO),
+          proofSize: gasRequired.proofSize.toBn().mul(BN_TWO),
+        }
+      ) as WeightV2
+
+
+     const txHash = contract.tx.transfer(
+       {
+        gasLimit:estimatedGas,
+        storageDepositLimit: null,
+       },
+       //DEV_ACCOUNT_I_ADDRESS,
+       DEV_ACCOUNT_II_ADDRESS,
+       VALUE
+     )
+     .signAndSend(DEV_ACCOUNT_I_ADDRESS,
+      {
+        signer:injector.signer
+      }
+      );
+
+      console.log(txHash);
+
+
+    } else {
+      console.error('Error', result.asErr);
+    }
+
+/*
+
+    // Check for errors
+    if (result.isErr) {
+      let error = ''
+      if (result.asErr.isModule) {
+        const dispatchError = api.registry.findMetaError(result.asErr.asModule)
+        error = dispatchError.docs.length ? dispatchError.docs.concat().toString() : dispatchError.name
+      } else {
+        error = result.asErr.toString()
+      }
+
+
+const MAX_CALL_WEIGHT = new BN(5_000_000_000_000).isub(BN_ONE);
+const PROOFSIZE = new BN(1_000_000);
+
+https://github.com/AstarNetwork/wasm-flipper/blob/e8aeaca1a2b7736e6aa53430f552dd9f9e686273/ui/components/app.tsx#L70
     
+    //const VALUE = 0.0000000000005;
+    
+    
+
+
+     //RPC calls
+     const blockWeights = await api.consts.system.blockWeights;
+     console.log("FrameSystemLimitsBlockWeights: " + blockWeights);
+
+     const gasLimit = api.registry.createType(
+      "WeightV2",
+      api.consts.system.blockWeights["maxBlock"]
+    );
 
     //const gasLimit = api.registry.createType('WeightV2', { refTime: 3912368128, proofSize: 131072 });
 
     //const callValue = await contract.query.balanceOf(DEV_ACCOUNT_I_ADDRESS, { gasLimit: -1 }, DEV_ACCOUNT_II_ADDRESS);
     
-/*
+
+https://github.com/AstarNetwork/wasm-flipper/blob/e8aeaca1a2b7736e6aa53430f552dd9f9e686273/ui/components/app.tsx#L70
+
     const callValue = await contract.query.totalSupply(DEV_ACCOUNT_I_ADDRESS, {
       gasLimit:api?.registry.createType('WeightV2', {
         refTime: MAX_CALL_WEIGHT,
@@ -58,31 +141,7 @@ const App=()=> {
       console.error('Error', callValue.result.asErr.toRawType());
     }
 
-          {
-        gasLimit: api?.registry.createType('WeightV2', {
-          refTime: MAX_CALL_WEIGHT,
-          proofSize: PROOFSIZE,
-        }) as WeightV2,
-        storageDepositLimit,
-      },
-*/
-
-    const { gasRequired } = await contract.query.transfer(
-      DEV_ACCOUNT_I_ADDRESS,
-      {
-        gasLimit: api?.registry.createType('WeightV2', {
-          refTime: MAX_CALL_WEIGHT,
-          proofSize: PROOFSIZE,
-        }) as WeightV2,
-        storageDepositLimit,
-      },
-      DEV_ACCOUNT_II_ADDRESS,
-      0,
-    );
-
-    console.log('gasRequired:', gasRequired);
-
-    /*
+       
 
    const gasLimit = api?.registry.createType('WeightV2', gasRequired) as WeightV2
    
@@ -194,7 +253,6 @@ await contract.tx
 
   useEffect(()=>{
     setup();
-    
   },[]);
 
 
@@ -213,6 +271,8 @@ await contract.tx
       //RPC calls
       const chainName = await api.rpc.system.chain();
       console.log("Chain Name: " + chainName.toPrimitive());
+
+     
    
     })();
 
