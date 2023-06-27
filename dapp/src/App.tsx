@@ -29,63 +29,7 @@ const App=()=> {
 
     formatBalance.setDefaults({ unit: 'ROC' });
 
-    const contract = new ContractPromise(api,abi, CONTRACT_ADDRESS);
 
-    //get the Weights V2 from the chain
-    // @ts-ignore
-    const maxBlock = api.consts.system.blockWeights.maxBlock //as unknown as WeightV2
-    console.log("WeightV2: " + maxBlock);
-
-    const storageDepositLimit=null;
-    const VALUE =new BN(0.0000000000005);
-
-    const injector= await web3FromAddress(DEV_ACCOUNT_I_ADDRESS);
-
-    //dry-run
-    const { gasRequired, storageDeposit, result } = await contract.query.transfer(
-      DEV_ACCOUNT_I_ADDRESS,
-      {
-        gasLimit: api?.registry.createType('WeightV2', maxBlock) as WeightV2,
-        storageDepositLimit,
-      },
-      DEV_ACCOUNT_II_ADDRESS,
-      VALUE,
-    );
-
-    if (result.isOk) {
-      console.log('gasRequired', gasRequired.toHuman());
-      console.log('storageDeposit', storageDeposit.toHuman());
-
-      const estimatedGas = api.registry.createType(
-        'WeightV2',
-        {
-          refTime: gasRequired.refTime.toBn().mul(BN_TWO),
-          proofSize: gasRequired.proofSize.toBn().mul(BN_TWO),
-        }
-      ) as WeightV2
-
-
-     const txHash = contract.tx.transfer(
-       {
-        gasLimit:estimatedGas,
-        storageDepositLimit: null,
-       },
-       //DEV_ACCOUNT_I_ADDRESS,
-       DEV_ACCOUNT_II_ADDRESS,
-       VALUE
-     )
-     .signAndSend(DEV_ACCOUNT_I_ADDRESS,
-      {
-        signer:injector.signer
-      }
-      );
-
-      console.log(txHash);
-
-
-    } else {
-      console.error('Error', result.asErr);
-    }
 
 /*
 
@@ -234,7 +178,6 @@ await contract.tx
 
     if(!api) return;
 
-
     if(!selectedAccount) return;
 
     const injector= await web3FromAddress(selectedAccount.address);
@@ -250,6 +193,72 @@ await contract.tx
       console.log(txHash);
   };
   
+
+  const onClickContractTransaction = async () => {
+
+    if(!api) return;
+
+    if(!selectedAccount) return;
+
+    const contract = new ContractPromise(api,abi, CONTRACT_ADDRESS);
+
+    //get the Weights V2 from the chain
+    // @ts-ignore
+    const maxBlock = api.consts.system.blockWeights.maxBlock //as unknown as WeightV2
+    console.log("WeightV2: " + maxBlock);
+
+    const storageDepositLimit=null;
+
+    const VALUE =new BN(0.0000000000005);
+
+    const injector= await web3FromAddress(DEV_ACCOUNT_I_ADDRESS);
+
+    //dry-run
+    const { gasRequired, storageDeposit, result } = await contract.query.transfer(
+      selectedAccount.address,
+      {
+        gasLimit: api?.registry.createType('WeightV2', maxBlock) as WeightV2,
+        storageDepositLimit,
+      },
+      DEV_ACCOUNT_II_ADDRESS,
+      VALUE,
+    );
+
+    if (result.isOk) {
+      console.log('gasRequired', gasRequired.toHuman());
+      console.log('storageDeposit', storageDeposit.toHuman());
+
+      const estimatedGas = api.registry.createType(
+        'WeightV2',
+        {
+          refTime: gasRequired.refTime.toBn().mul(BN_TWO),
+          proofSize: gasRequired.proofSize.toBn().mul(BN_TWO),
+        }
+      ) as WeightV2
+
+
+     const txHash = contract.tx.transfer(
+       {
+        gasLimit:estimatedGas,
+        storageDepositLimit: null,
+       },
+       DEV_ACCOUNT_II_ADDRESS,
+       VALUE
+     )
+     .signAndSend(DEV_ACCOUNT_I_ADDRESS,
+      {
+        signer:injector.signer
+      }
+      );
+
+      console.log(txHash);
+
+
+    } else {
+      console.error('Error', result.asErr);
+    }
+  };
+
 
   useEffect(()=>{
     setup();
@@ -312,6 +321,7 @@ await contract.tx
      {selectedAccount ? <>
      <button onClick={onClickTransaction}>Transfer 0.05 ROC from {selectedAccount.address} to 5Ev7FnAcuNwoPRF1Txb5YvyjMCeuBaMh8tHzcMqGYrCa3ZFe</button>
      <span>Balance:{formatBalance(balance, { withSiFull: true })}</span>
+     <button onClick={onClickContractTransaction}>Contract Transfer </button>
      </> :null}
 
     </div>
