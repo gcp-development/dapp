@@ -20,8 +20,9 @@ To create a similar project.
 nvm use 20.2.0
 npx create-react-app dapp --template typescript
 cd dapp
-npm i -D prettier eslint-config-prettier eslint-plugin-prettier
+npm i -D prettier eslint-config-prettier eslint-plugin-prettier @tailwindcss/forms
 npm i @polkadot/api @polkadot/extension-dapp @polkadot/extension-inject @polkadot/util @polkadot/api-contract
+npx tailwindcss init
 ```
 
 To run the project.
