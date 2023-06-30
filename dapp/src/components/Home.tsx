@@ -150,7 +150,7 @@ export  default function Home({api, accountsList, web3Account}:{api?:ApiPromise,
   return (
      <div className="container">
       <div>
-        <h2 className="title text-3xl font-bold underline mb-3">aDapp</h2>
+        <h2 className="title text-3xl font-bold underline mb-3">dApp</h2>
         <p className="mb-3">Account selected name: {web3Account.meta.name}</p>
       </div>
       <div >
