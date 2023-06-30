@@ -15,14 +15,15 @@ const App=()=> {
   const[selectedAccount,setSelectedAccount]= useState<InjectedAccountWithMeta>();
 
   const createInstance = async() => {
+    //Create an instance
+    //https://polkadot.js.org/docs/api/start/create/
     const wsProvider=new WsProvider(WS_PROVIDER);
     const api = new ApiPromise({ provider: wsProvider });
     await api.isReady;
     console.log(api.genesisHash.toHex());
     setApi(api);
   };
-  //Create an instance https://polkadot.js.org/docs/api/start/create/
-
+  
   useEffect(()=>{
     createInstance();
   },[]);
@@ -55,7 +56,7 @@ const App=()=> {
   };
  
   return (
-    <div className="container">
+    <div className="div">
     {accounts.length === 0 ? (
       <button onClick={onClickConnection} > Connect</button>
       ):null}
@@ -73,7 +74,7 @@ const App=()=> {
       </>
     ):null}
      {selectedAccount ? <>
-     <Home accountsList={accounts} web3Account={selectedAccount}></Home>
+     <Home api={api} accountsList={accounts} web3Account={selectedAccount}></Home>
      </> :null}
     </div>
   );

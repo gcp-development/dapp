@@ -1,0 +1,12 @@
+.container {
+    text-align: left;
+    border: 0px solid;
+    width: 55%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h2.title {
+    text-align: center;
+}
