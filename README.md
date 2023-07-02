@@ -2,7 +2,7 @@
 
  <hr>
 
-![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/b3f9d3de-6e40-4061-b337-bb10e0e43668)
+![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/89d1470e-7b63-41c7-9ad8-00addff526e1)
 
 <hr>
 
