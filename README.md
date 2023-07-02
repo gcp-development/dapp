@@ -1,6 +1,8 @@
  # Smart Contract dApp(Work In progress)
+ 
+![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/b3f9d3de-6e40-4061-b337-bb10e0e43668)
 
 References:<br>
-[ink!](https://use.ink/)<br>
-[Astar Wasm Smart Contracts](https://docs.astar.network/docs/build/wasm/)<br>
-[Polkadot Standards Proposals (PSPs)](https://github.com/w3f/PSPs/tree/master)<br>
+[Polkadot.js](https://polkadot.js.org/docs/)<br>
+[Rococo Network](https://substrate.io/developers/rococo-network/)
+[Crust Network](https://crust.network/)<br>
