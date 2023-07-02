@@ -3,7 +3,9 @@
 ## Motivation
 
 <hr>
+
 ## Table of Contents<br>
+
 <ul>
 <li><a href="https://github.com/gcp-development/smart-contract-dapp/tree/main#dapp-architecture" target="_self"></a>dApp Architecture</li>
 <ul>
