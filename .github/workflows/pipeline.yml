@@ -1,4 +1,4 @@
-name: Crust Pinner Template
+name: Upload GUI to Crust
 on:
   # mannual trigger
   workflow_dispatch:
@@ -17,8 +17,8 @@ jobs:
           node-version: 20.2.0
 
       - name: Install dependencies
-        run: npm install
-        working-directory: ./dapp/
+        run: npm ci
+        working-directory: ./smart-contract-dapp/dapp/
         
       - name: Build
         run: npm build
