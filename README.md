@@ -19,6 +19,10 @@
 
 ## dApp Architecture
 
+dApps (decentralized applications)  It is different from traditional applications built on the old Web2 world, as it can directly connect developers with users without the involvement of intermediaries to manage user data and code.
+
+We don’t require permission to build a dApp and no company can change the rules of the platform ([Polkadot Governance](https://wiki.polkadot.network/docs/learn-governance) & [Crust Network Governance](https://wiki.crust.network/docs/en/governanceGuide)). The Smart Contract of a dApp runs on a decentralized peer-to-peer network(Blockchain). The graphical user interface, (GUI) of a dApp runs, on a decentralized peer-to-peer network(IPFS), that sends API calls to the Smart Contract.
+
 Components:
 
 - Blockchain ([Parachain](https://polkadot.network/features/parachains/)), decentralized blockchain platform that establishes a peer-to-peer network that securely executes and verifies application code ([smart contract](https://wiki.polkadot.network/docs/build-smart-contracts)).
