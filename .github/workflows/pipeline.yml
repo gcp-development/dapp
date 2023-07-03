@@ -22,7 +22,7 @@ jobs:
 
       - name: Build
         run: npm run build
-        working-directory: './dapp/build'
+        working-directory: './dapp'
         
       - name: Upload to crust
         id: gui
