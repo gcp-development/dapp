@@ -10,28 +10,3 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20.2.0
-          
-      - name: Install dependencies
-        run: npm install
-        
-      - name: Build
-      - run: npm build
-      
-      - name: Upload gui files
-        id: gui
-        uses: crustio/ipfs-upload-action@v2.0.2
-        with:
-          path: './build'
-          seeds: ${{ secrets.BLOCKCHAIN_SEEDS }}
-          
-      - name: Pin to Crust
-        id: pintocrust
-        uses: crustio/ipfs-crust-action@v1.0.8
-        with:
-          cid: ${{ steps.gui.outputs.hash }}
-          seeds: ${{ secrets.BLOCKCHAIN_SEEDS }}
