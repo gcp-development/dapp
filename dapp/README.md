@@ -30,7 +30,7 @@ To run the project.
 npm start
 ```
 
-To run the project.
+To build the project.
 ```bash
 npm run build
 ```
