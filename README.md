@@ -36,6 +36,10 @@ Components:
 
 <hr>
 
+![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/1f48efd0-4541-4d62-b7da-e07cf4c9ca20)
+
+<hr>
+
 References:<br>
 [Polkadot.js](https://polkadot.js.org/docs/)<br>
 [Rococo Network](https://substrate.io/developers/rococo-network/)<br>
