@@ -22,10 +22,18 @@ jobs:
 
       - name: Build
         run: npm build
+        working-directory: './dapp/build/'
         
       - name: Upload to crust
         id: gui
         uses: crustio/ipfs-upload-action@v2.0.2
         with:
-          path: './build'
+          path: './dapp/build/'
+          seeds: ${{ secrets.BLOCKCHAIN_SEEDS }}
+
+      - name: Pin cid to Crust
+        id: pincidtocrust
+        uses: crustio/ipfs-crust-action@v1.0.8
+        with:
+          cid: ${{ steps.gui.outputs.hash }}
           seeds: ${{ secrets.BLOCKCHAIN_SEEDS }}
