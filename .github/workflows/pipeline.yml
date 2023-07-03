@@ -31,7 +31,7 @@ jobs:
           path: './dapp/build'
           seeds: ${{ secrets.BLOCKCHAIN_SEEDS }}
 
-      - name: Pin cid to Crust
+      - name: Pin CID to Crust
         id: pincidtocrust
         uses: crustio/ipfs-crust-action@v1.0.8
         with:
