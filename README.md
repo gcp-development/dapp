@@ -30,7 +30,7 @@ Components:
 - Smart Contract [(ink!)](https://use.ink/), [application code](https://github.com/gcp-development/smart-contract-dapp/tree/main/erc20).
 - Front-end [(React](https://react.dev/learn) + [polkadot.js)](https://polkadot.js.org/docs/), [graphical user interface(GUI)](https://github.com/gcp-development/smart-contract-dapp/tree/main/dapp).
 
-![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/89d1470e-7b63-41c7-9ad8-00addff526e1)
+![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/aee2a746-3b0f-42d5-b0b1-22ecb7acfa5c)
 
 <hr>
 
