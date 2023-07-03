@@ -22,3 +22,10 @@ jobs:
 
       - name: Build
         run: npm build
+        
+      - name: Upload to crust
+        id: gui
+        uses: crustio/ipfs-upload-action@v2.0.2
+        with:
+          path: './build'
+          seeds: ${{ secrets.BLOCKCHAIN_SEEDS }}
