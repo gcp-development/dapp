@@ -2,7 +2,7 @@
  
 ## Motivation
 
-The biggest revolution that decentralized peer-to-peer networks have given us (techy guys like myself) was a decentralized economy. Nevertheless,  we must not make the mistake of assuming that nothing can go wrong. With the power of decentralization comes the responsibility of ensuring we are properly informed.
+The biggest revolution that decentralized peer-to-peer networks has given us (techy guys like myself) was a decentralized economy. By reducing the power and influence of centralized entities, such as big tech companies and governments. This allows for a more transparent, equitable, and democratic internet that promotes fair distribution of resources and opportunities. Nevertheless, we must not make the mistake of assuming that nothing can go wrong. With the power of decentralization comes the responsibility of ensuring we are properly informed.
 
 <hr>
 
