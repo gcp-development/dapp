@@ -16,11 +16,11 @@ jobs:
         id: uploadsite
         with:
           path: './.github/dapp'
-          seeds: ${{ secrets.CRUST_SEEDS }}
+          seeds: ${{ secrets.IPFS_SEEDS }}
       
       - name: Pin to Crust
         id: pintocrust
         uses: crustio/ipfs-crust-action@v1.0.8
         with:
           cid: ${{ steps.uploadsite.outputs.hash }}
-          seeds: ${{ secrets.CRUST_SEEDS }}
+          seeds: ${{ secrets.IPFS_SEEDS }}
