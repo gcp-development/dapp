@@ -7,7 +7,7 @@
 ## Table of Contents<br>
 
 <ul>
-<li><a href="https://github.com/gcp-development/smart-contract-dapp/tree/main#dapp-architecture" target="_self"></a>dApp Architecture</li>
+<li><a href="https://github.com/gcp-development/smart-contract-dapp/tree/main#dapp-architecture" target="_self">dApp Architecture</a></li>
 <ul>
 <li><a href="" target="_self"></a></li>
 <li><a href="" target="_self"></a></li>
@@ -19,7 +19,7 @@
 
 ## dApp Architecture
 
-dApps (decentralized applications)  It is different from traditional applications built on the old Web2 world, as it can directly connect developers with users without the involvement of intermediaries to manage user data and code.
+dApps (decentralized applications) are different from traditional applications built on the old Web2 world, as it can directly connect developers with users without the involvement of intermediaries to manage user data and code.
 
 We don’t require permission to build a dApp and no company can change the rules of the platform ([Polkadot Governance](https://wiki.polkadot.network/docs/learn-governance) & [Crust Network Governance](https://wiki.crust.network/docs/en/governanceGuide)). The Smart Contract of a dApp runs on a decentralized peer-to-peer network(Blockchain). The graphical user interface, (GUI) of a dApp runs, on a decentralized peer-to-peer network(IPFS), that sends API calls to the Smart Contract.
 
