@@ -5,7 +5,7 @@ on:
 
 jobs:
   pin_on_crust:
-    name: aDpp 
+    name: Upload GUI files
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
