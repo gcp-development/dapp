@@ -18,7 +18,7 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        working-directory: ./dapp/
-        
+        working-directory: ./smart-contract-dapp/dapp/
+
       - name: Build
         run: npm build
