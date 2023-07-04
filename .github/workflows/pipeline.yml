@@ -1,4 +1,4 @@
-name: Upload GUI to Crust
+name: Crust pipeline
 on:
   # mannual trigger
   workflow_dispatch:
