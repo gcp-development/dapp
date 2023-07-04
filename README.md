@@ -10,11 +10,6 @@ The biggest revolution that decentralized peer-to-peer networks has given us (te
 
 <ul>
 <li><a href="https://github.com/gcp-development/smart-contract-dapp/tree/main#dapp-architecture" target="_self">dApp Architecture</a></li>
-<ul>
-<li><a href="" target="_self"></a></li>
-<li><a href="" target="_self"></a></li>
-<li><a href="" target="_self"></a></li>
-</ul>
 <li><a href="" target="_self">Conclusion</a></li>
 </ul>
 <hr>
