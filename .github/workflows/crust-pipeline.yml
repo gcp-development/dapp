@@ -35,8 +35,11 @@ jobs:
         run: echo "CID ${{ steps.gui.outputs.hash }}"
         
       - name: Pin CID to Crust
-        id: pincidtocrust
+        id: pincid
         uses: crustio/ipfs-crust-action@v2.0.6
         with:
           cid: ${{ steps.gui.outputs.hash }}
           seeds: ${{ secrets.BLOCKCHAIN_SEEDS }}
+          
+      - name: Print res(V0)
+        run: echo "Pin ${{ steps.pincid.outputs.res }}"
