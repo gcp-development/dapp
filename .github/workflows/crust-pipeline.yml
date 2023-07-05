@@ -41,5 +41,5 @@ jobs:
           cid: ${{ steps.gui.outputs.hash }}
           seeds: ${{ secrets.BLOCKCHAIN_SEEDS }}
           
-      - name: Print res(V0)
+      - name: Print result
         run: echo "Pin ${{ steps.pincid.outputs.res }}"
