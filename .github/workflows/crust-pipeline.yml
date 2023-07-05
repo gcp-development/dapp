@@ -33,7 +33,7 @@ jobs:
 
       - name: Pin CID to Crust
         id: pincidtocrust
-        uses: crustio/ipfs-crust-action@v1.0.8
+        uses: crustio/ipfs-crust-action@v2.0.6
         with:
           cid: ${{ steps.gui.outputs.hash }}
           seeds: ${{ secrets.BLOCKCHAIN_SEEDS }}
