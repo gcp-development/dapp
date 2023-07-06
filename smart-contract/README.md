@@ -16,7 +16,7 @@ This project was developed using the [Intellij Community](https://www.jetbrains.
 - [Environment](https://github.com/gcp-development/smart-contract-dapp/blob/main/erc20/README.md#environment)
 - [Test cases](https://github.com/gcp-development/smart-contract-dapp/blob/main/erc20/README.md#test-cases)
 - [Build](https://github.com/gcp-development/smart-contract-dapp/blob/main/erc20/README.md#build)
-- [Deploy to the Contracts on Rococo Parachain]
+- [Manually deploy to the Contracts on Rococo Parachain]
 
 <hr>
 
@@ -95,7 +95,7 @@ target
 
 <hr>
 
-### Deploy to the Contracts [Contracts on Rococo Parachain](https://parachains.info/details/astar)
+### Manually deploy to the Contracts on Rococo Parachain.
 
 There are three ways of deploying our smart contract:
 - via command line.
