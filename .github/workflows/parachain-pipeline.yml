@@ -1,0 +1,10 @@
+name: Parachain pipeline
+on:
+  # mannual trigger
+  workflow_dispatch:
+
+jobs:
+    deploy_erc20:
+      name: Deploy erc20 Smart Contract
+      runs-on: ubuntu-latest
+      steps:
