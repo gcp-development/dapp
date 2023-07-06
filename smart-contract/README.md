@@ -99,27 +99,19 @@ target
 
 There are three ways of deploying our smart contract:
 - via command line.
-- using the [Shibuya Testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.shibuya.astar.network#/contracts) portal.
-- using the [Contracts Substrate UI](https://contracts-ui.substrate.io/?rpc=wss://rpc.shibuya.astar.network). 
+- using the [polkadot.js](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/contracts) portal.
+- using the [Contracts Substrate UI](https://contracts-ui.substrate.io/?rpc=wss://rococo-contracts-rpc.polkadot.io).
  
-For this example we are going to use the Contracts Substrate UI, but before we proceed we need to get some [faucets](https://portal.astar.network/) for the Shibuya-Testnet. For managing our dev account we are going to use the [polkadot-js-browser-extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadot-js-browser-extension).
+For this example we are going to use the Contracts Substrate UI, but before we proceed we need to get some [ROC faucets](https://use.ink/faucet) for the Contracts on Rococo. For managing our dev accounts we are going to use the [polkadot-js-browser-extension](https://wiki.polkadot.network/docs/learn-account-generation#polkadot-js-browser-extension).
 
-Open the [Contracts Substrate UI](https://contracts-ui.substrate.io/?rpc=wss://rpc.shibuya.astar.network)
+Open the [Contracts Substrate UI](https://contracts-ui.substrate.io/?rpc=wss://rococo-contracts-rpc.polkadot.io)
 
-![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/f72640b4-e0f7-45e0-b787-85738af159f1)
 
 Upload and Instantiate the Contract
 
-![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/45de5883-ee74-46da-87ab-8dfbc9a44de2)
-
-![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/1ecb4e82-c58b-4518-a2a1-1ca00e0f3f86)
 
 Sign the transaction
 
-![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/cec8fe5b-26af-4999-bee5-d3d41a0f20cb)
-
-![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/be96e2ec-99a1-4e4c-8754-5a37b4cc8dfd)
 
 References:<br/>
 [ERC-20 implementation](https://github.com/paritytech/ink-examples/tree/main/erc20)<br/>
-[Astar Docs](https://docs.astar.network/)
