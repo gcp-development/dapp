@@ -1,4 +1,4 @@
-# ERC-20 Token Standard
+# Smart Contract (ERC-20 Token Standard)
 
 It's assumed that these software are installed and running:
 
