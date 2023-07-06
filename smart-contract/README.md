@@ -82,16 +82,16 @@ In the target folder we should have these files.
 ```bash
 target
   └─ ink
-    └─ erc20.contract
-    └─ erc20.json
-    └─ erc20.wasm
+    └─ smart_contract.contract
+    └─ smart_contract.json
+    └─ smart_contract.wasm
 ```
 
-- erc20.contract (contract bundle)
-- erc20.json ([ABI](https://use.ink/basics/metadata#abi))
-- erc20.wasm ([WASM binary](https://webassembly.org/))
+- smart_contract.contract (contract bundle)
+- smart_contract.json ([ABI](https://use.ink/basics/metadata#abi))
+- smart_contract.wasm ([WASM binary](https://webassembly.org/))
 
-![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/a2fcd86f-4e6f-48b7-8c57-5aac8993b53b)
+![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/dbe49f19-0cf4-4dff-a156-fa8863078c33)
 
 <hr>
 
