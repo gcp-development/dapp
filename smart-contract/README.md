@@ -76,7 +76,7 @@ Build the contract
 cargo contract build --release
 ```
 
-![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/402b61c4-5e79-4ede-99a3-2672beac5fb9)
+![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/dbe49f19-0cf4-4dff-a156-fa8863078c33)
 
 In the target folder we should have these files.
 ```bash
@@ -91,7 +91,7 @@ target
 - smart_contract.json ([ABI](https://use.ink/basics/metadata#abi))
 - smart_contract.wasm ([WASM binary](https://webassembly.org/))
 
-![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/dbe49f19-0cf4-4dff-a156-fa8863078c33)
+![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/e0cbccea-d990-487c-8ec5-e891594d2e4e)
 
 <hr>
 
