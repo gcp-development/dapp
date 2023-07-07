@@ -14,7 +14,7 @@ jobs:
           toolchain: nightly-2023-02-09
           target: wasm32-unknown-unknown
           default: true
-          components: rustfmt
+          components: rust-src
           
        - name: Install cargo-contract
          run: cargo install --force --locked cargo-contract.
