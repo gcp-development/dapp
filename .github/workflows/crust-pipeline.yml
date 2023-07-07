@@ -29,7 +29,7 @@ jobs:
         uses: crustio/ipfs-upload-action@v2.0.2
         with:
           path: './dapp/build'
-          seeds: ${{ secrets.BLOCKCHAIN_SEEDS }}
+          seeds: ${{ secrets.IPFS_SEEDS }}
           
       - name: Print CID
         run: echo "CID ${{ steps.gui.outputs.hash }}"
@@ -39,7 +39,7 @@ jobs:
         uses: crustio/ipfs-crust-action@v2.0.6
         with:
           cid: ${{ steps.gui.outputs.hash }}
-          seeds: ${{ secrets.BLOCKCHAIN_SEEDS }}
+          seeds: ${{ secrets.IPFS_SEEDS }}
           
       - name: Print result
         run: echo "Pin ${{ steps.pincid.outputs.res }}"
