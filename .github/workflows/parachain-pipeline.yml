@@ -17,7 +17,7 @@ jobs:
           components: rust-src
           
        - name: Install cargo-contract
-         run: cargo install --force --locked cargo-contract.
+         run: cargo install --force --locked cargo-contract
          
        - name: Cache
          uses: Swatinem/rust-cache@v2
