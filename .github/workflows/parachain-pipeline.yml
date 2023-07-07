@@ -16,6 +16,9 @@ jobs:
           default: true
           components: rustfmt
           
+       - name: Install cargo-contract
+         run: cargo install --force --locked cargo-contract.
+         
        - name: Cache
          uses: Swatinem/rust-cache@v2
          
@@ -25,6 +28,9 @@ jobs:
        - name: Run tests
          run: cargo test
          working-directory: './smart-contract'
+         
+         
+         
          
        - name: Build Release
          run: cargo contract build --release
