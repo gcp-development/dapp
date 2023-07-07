@@ -65,7 +65,7 @@ Run the test cases for the  contract
 cargo test
 ```
 
-![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/4e92c092-1d00-4ff8-827f-50e0ca5fa786)
+![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/0f3fc894-1e4d-49d5-a810-fa8b710a0512)
 
 <hr>
 
