@@ -19,9 +19,6 @@ jobs:
        - name: Checkout
          uses: actions/checkout@v3
          
-       - name: Check Formatting
-         uses: actions-rs/cargo@v1
-         with:
-          command: fmt
-          args: --manifest-path './smart-contract/Cargo.toml'  --check
-          
+       - name: Run tests
+         run: cargo test
+         working-directory: './smart-contract'
