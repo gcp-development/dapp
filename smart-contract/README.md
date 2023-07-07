@@ -27,6 +27,7 @@ This project was developed using the [Intellij Community](https://www.jetbrains.
 ```bash
 cargo contract --version
 ```
+Note:to update the [cargo-contract](https://github.com/paritytech/cargo-contract#installation) binary to the latest version just run:cargo install --force --locked cargo-contract .
 
 ![image](https://github.com/gcp-development/erc20/assets/76512851/97773ed9-ea13-4fdc-b011-b860e7617993)
 
