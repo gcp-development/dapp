@@ -18,6 +18,8 @@ The biggest revolution that decentralized peer-to-peer networks has given us (te
 
 dApps (decentralized applications) are different from traditional applications built on the old Web2 world, as it can directly connect developers with users without the involvement of intermediaries to manage user data and code.
 
+![image](https://github.com/gcp-development/dapp/assets/76512851/a42d5561-4a5b-4813-a373-585eb06d71c2)
+
 We don’t require permission to build a dApp and no company can change the rules of the platform ([Polkadot Governance](https://wiki.polkadot.network/docs/learn-governance) & [Crust Network Governance](https://wiki.crust.network/docs/en/governanceGuide)). The Smart Contract of a dApp runs on a decentralized peer-to-peer network(Blockchain). The graphical user interface, (GUI) of a dApp runs, on a decentralized peer-to-peer network(IPFS), that sends API calls to the Smart Contract.
 
 Components:
@@ -28,8 +30,6 @@ Components:
 - Front-end [(React](https://react.dev/learn) + [polkadot.js)](https://polkadot.js.org/docs/), [graphical user interface(GUI)](https://github.com/gcp-development/dapp/tree/main/gui).
 
 ![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/aee2a746-3b0f-42d5-b0b1-22ecb7acfa5c)
-
-![image](https://github.com/gcp-development/dapp/assets/76512851/a42d5561-4a5b-4813-a373-585eb06d71c2)
 
 <hr>
 
