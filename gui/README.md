@@ -1,4 +1,4 @@
-# dApp
+# Gui
 
 This [React App project with TypeScript](https://create-react-app.dev/docs/adding-typescript/), was developed using [Visual Code](https://code.visualstudio.com/download) and using [Firefox React Developer Tools](https://addons.mozilla.org/en-GB/firefox/addon/react-devtools/)
 
@@ -19,7 +19,7 @@ To create a similar project.
 ```bash
 nvm use 20.2.0
 npx create-react-app dapp --template typescript
-cd dapp
+cd gui
 npm i -D prettier eslint-config-prettier eslint-plugin-prettier @tailwindcss/forms
 npm i @polkadot/api @polkadot/extension-dapp @polkadot/extension-inject @polkadot/util @polkadot/api-contract
 npx tailwindcss init
