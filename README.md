@@ -1,4 +1,4 @@
- # Smart Contract dApp(Work In progress)
+ # Decentralized Applications (dApps)(Work In progress)
  
 ## Motivation
 
