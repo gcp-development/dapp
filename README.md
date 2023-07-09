@@ -28,7 +28,9 @@ Components:
 - IPFS ([Crust Storage](https://wiki.polkadot.network/docs/build-storage#crust-storage)), hypermedia and file sharing peer-to-peer network for storing and sharing data in a distributed file system. 
 - Smart Contract [(ink!)](https://use.ink/), [application code](https://github.com/gcp-development/dapp/tree/main/smart-contract).
 - Front-end [(React](https://react.dev/learn) + [polkadot.js)](https://polkadot.js.org/docs/), [graphical user interface(GUI)](https://github.com/gcp-development/dapp/tree/main/gui).
-
+- Parachain pipeline, [Github workflow](https://github.com/gcp-development/dapp/blob/main/.github/workflows/parachain-pipeline.yml)
+- IPFS pipeline, [Github workflow](https://github.com/gcp-development/dapp/blob/main/.github/workflows/crust-pipeline.yml)
+  
 ![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/aee2a746-3b0f-42d5-b0b1-22ecb7acfa5c)
 
 <hr>
