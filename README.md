@@ -10,8 +10,8 @@ The biggest revolution that decentralized peer-to-peer networks has given us (te
 
 <ul>
  <li><a href="https://github.com/gcp-development/smart-contract-dapp/tree/main#dapp-architecture" target="_self">dApp Architecture</a></li>
- <li><a href="" target="_self">Conclusion</a></li>
  <li><a href="" target="_self">Smoke Tests</a></li> 
+ <li><a href="" target="_self">Conclusion</a></li>
 </ul>
 
 <hr>
@@ -37,16 +37,15 @@ Components:
 
 <hr>
 
-## Conclusion
-
-<hr>
-
 ## Smoke Tests
 
 [Contracts on Rococo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/contracts)
 
-
 ![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/1f48efd0-4541-4d62-b7da-e07cf4c9ca20)
+
+<hr>
+
+## Conclusion
 
 <hr>
 
