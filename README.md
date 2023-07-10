@@ -51,6 +51,8 @@ Test the [React App](https://crustipfs.live/ipfs/QmfRfiyVWLcMfYheCjbw8mLwTvmrso3
 
 ![image](https://github.com/gcp-development/dapp/assets/76512851/b37d6621-f0bd-464f-8e9a-59ebecc93652)
 
+![image](https://github.com/gcp-development/dapp/assets/76512851/ea90385b-e5d5-40f6-a6ff-f5bf62662eae)
+
 
 <hr>
 
