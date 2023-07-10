@@ -57,7 +57,7 @@ Note: Get some faucets in [here](https://discord.com/channels/747361122058764349
 
 ![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/1f48efd0-4541-4d62-b7da-e07cf4c9ca20)
 
-IPFS pipeline (CID)
+IPFS pipeline ([CID](https://docs.ipfs.tech/concepts/content-addressing/))
 
 ![image](https://github.com/gcp-development/dapp/assets/76512851/6b06e98d-ee5b-4fc4-99ea-ff6c70446235)
 
