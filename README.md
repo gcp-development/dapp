@@ -79,6 +79,8 @@ Test the [React App](https://crustipfs.live/ipfs/QmfRfiyVWLcMfYheCjbw8mLwTvmrso3
 
 No economic model is perfect. And a Token Economic Model built in code with mathematical rules and governed by a decentralized network who collectively make decisions as a community has also shortcomings. But comparing this with central banks who have the power to print money on a impulse and make monetary decisions without the input of currency-holders. I would choose a Token Economy Model every time.
 
+Technology is the backbone of any token economic model and the way we implement it will influence the incentives and value to token holders, which will benefit or harm all stakeholders in the system.
+
 <hr>
 
 References:<br>
