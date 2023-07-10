@@ -39,6 +39,13 @@ Components:
 
 ## Smoke Tests
 
+The smoke test were done using two accounts with the [polkadot wallet extension](https://addons.mozilla.org/en-GB/firefox/addon/polkadot-js-extension/).
+
+![image](https://github.com/gcp-development/dapp/assets/76512851/40402c43-3ef0-494a-8a54-118baae123e3)
+
+
+
+
 [Contracts on Rococo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/contracts)
 
 ![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/1f48efd0-4541-4d62-b7da-e07cf4c9ca20)
