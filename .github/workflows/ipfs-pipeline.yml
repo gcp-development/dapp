@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  pin_on_crust:
+  upload_gui_files_on_crust:
     name: Upload GUI files
     runs-on: ubuntu-latest
     steps:
@@ -33,6 +33,9 @@ jobs:
           
       - name: Print CID
         run: echo "CID ${{ steps.gui.outputs.hash }}"
+        
+      - name: Print Link
+        run: echo "Link https://crustipfs.live/ipfs/${{ steps.gui.outputs.hash }}/?filename=build"
         
       - name: Pin CID to Crust
         id: pincid
