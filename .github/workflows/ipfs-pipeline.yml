@@ -1,4 +1,4 @@
-name: Crust pipeline
+name: IPFS pipeline
 on:
   # mannual trigger
   workflow_dispatch:
