@@ -39,7 +39,7 @@ Components:
 
 ## Smoke Tests
 
-The smoke test were done using two Rococo accounts with the [polkadot wallet extension](https://addons.mozilla.org/en-GB/firefox/addon/polkadot-js-extension/) and a Crust account with the [Crust Wallet](https://chrome.google.com/webstore/detail/crust-wallet/jccapkebeeiajkkdemacblkjhhhboiek)
+The smoke test were done using two Rococo accounts with the [polkadot wallet extension](https://addons.mozilla.org/en-GB/firefox/addon/polkadot-js-extension/) and a Crust account with the [Crust Wallet](https://chrome.google.com/webstore/detail/crust-wallet/jccapkebeeiajkkdemacblkjhhhboiek).
 
 - Rococo accounts
 
