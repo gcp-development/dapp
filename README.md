@@ -10,7 +10,12 @@ The biggest revolution that decentralized peer-to-peer networks has given us (te
 
 <ul>
  <li><a href="https://github.com/gcp-development/smart-contract-dapp/tree/main#dapp-architecture" target="_self">dApp Architecture</a></li>
- <li><a href="" target="_self">Smoke Tests</a></li> 
+ <li><a href="https://github.com/gcp-development/dapp/tree/main#smoke-tests" target="_self">Smoke Tests</a></li> 
+ <ul>
+  <li><a href="" target="_self">Contracts on Rococo</a></li>
+  <li><a href="" target="_self">IPFS pipeline</a></li>
+  <li><a href="" target="_self">Test the React App</a></li>
+ </ul>
  <li><a href="" target="_self">Conclusion</a></li>
 </ul>
 
