@@ -31,7 +31,7 @@ Components:
 - Smart Contract [(ink!)](https://use.ink/), [application code](https://github.com/gcp-development/dapp/tree/main/smart-contract).
 - Front-end [(React](https://react.dev/learn) + [polkadot.js)](https://polkadot.js.org/docs/), [graphical user interface(GUI)](https://github.com/gcp-development/dapp/tree/main/gui).
 - Parachain pipeline, [Github workflow](https://github.com/gcp-development/dapp/blob/main/.github/workflows/parachain-pipeline.yml)
-- IPFS pipeline, [Github workflow](https://github.com/gcp-development/dapp/blob/main/.github/workflows/crust-pipeline.yml)
+- IPFS pipeline, [Github workflow](https://github.com/gcp-development/dapp/blob/main/.github/workflows/ipfs-pipeline.yml)
   
 ![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/aee2a746-3b0f-42d5-b0b1-22ecb7acfa5c)
 
@@ -42,6 +42,15 @@ Components:
 [Contracts on Rococo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/contracts)
 
 ![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/1f48efd0-4541-4d62-b7da-e07cf4c9ca20)
+
+IPFS pipeline (CID)
+
+![image](https://github.com/gcp-development/dapp/assets/76512851/6b06e98d-ee5b-4fc4-99ea-ff6c70446235)
+
+Test the [React App](https://crustipfs.live/ipfs/QmfRfiyVWLcMfYheCjbw8mLwTvmrso3djtakYqW6iKAwez/?filename=build)
+
+![image](https://github.com/gcp-development/dapp/assets/76512851/b37d6621-f0bd-464f-8e9a-59ebecc93652)
+
 
 <hr>
 
