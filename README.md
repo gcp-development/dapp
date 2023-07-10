@@ -45,10 +45,13 @@ The smoke test were done using two Rococo accounts with the [polkadot wallet ext
 
 ![image](https://github.com/gcp-development/dapp/assets/76512851/40402c43-3ef0-494a-8a54-118baae123e3)
 
+Note: Get some faucets in [here](https://use.ink/faucet).
+
 - Crust account
 
 ![image](https://github.com/gcp-development/dapp/assets/76512851/ae6f5a66-c8be-4375-a42d-fa1eb31cfb1e)
 
+Note: Get some faucets in [here](https://discord.com/channels/747361122058764349/885762751241289769).
 
 [Contracts on Rococo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/contracts)
 
