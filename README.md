@@ -83,7 +83,7 @@ No economic model is perfect. And a Token Economic Model built in code with math
 
 Technology is the backbone of any token economic model and the way we implement it will influence the incentives and value to token holders, which will benefit or harm all stakeholders in the system. The same thing could be said about a use case that works well for a Deflationary model does not mean that it will work the same for an Inflationary model.
 
-Decentralized applications (dApps) will represent the channel how those tokens will be used by the general public and it will dictated the success of those economics models by its ability to trade goods, services in a truthful and secure way. 
+Decentralized applications (dApps) will represent the channel how those tokens will be used by the general public and it will dictated the success of those economics models by its ability to trade goods, services in a truthful, secure and fair way.
 
 <hr>
 
