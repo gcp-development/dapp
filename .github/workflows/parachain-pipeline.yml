@@ -33,6 +33,14 @@ jobs:
          run: cargo contract build --release
          working-directory: './smart-contract'
          
+       - name: Contract check
+         run: cargo contract check
+         working-directory: './smart-contract'      
+         
+       - name: list
+         run: ls -l
+         working-directory: './smart-contract'      
+                  
        - name: Upload Smart contract
          run: cargo contract upload --url 'wss://rococo-contracts-rpc.polkadot.io' --suri ${{ secrets.BLOCKCHAIN_SEEDS }}
          working-directory: './smart-contract'
