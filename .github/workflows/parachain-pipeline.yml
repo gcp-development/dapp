@@ -23,7 +23,7 @@ jobs:
          uses: Swatinem/rust-cache@v2
          
        - name: Upload Smart contract
-         run: cargo contract upload  --url "wss://rococo-contracts-rpc.polkadot.io" --suri ${{ secrets.BLOCKCHAIN_SEEDS }}
+         run: cargo contract upload  --suri ${{ secrets.BLOCKCHAIN_SEEDS }}
          
        - name: list
          run: ls -l         
