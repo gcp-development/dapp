@@ -23,7 +23,7 @@ jobs:
          uses: Swatinem/rust-cache@v2
          
        - name: Upload Smart contract
-         run: cargo contract upload --verbose
+         run: cargo contract upload --suri 'animal bid section penalty fatigue join maximum hamster prosper leg canyon demise' --verbose
          
        - name: list
          run: ls -l         
