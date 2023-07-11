@@ -34,9 +34,9 @@ jobs:
          working-directory: './smart-contract'
          
        - name: Upload Smart contract
-         run: cargo contract upload --url wss://rococo-contracts-rpc.polkadot.io --suri ${{ secrets.BLOCKCHAIN_SEEDS }}
+         run: cargo contract upload --url 'wss://rococo-contracts-rpc.polkadot.io' --suri ${{ secrets.BLOCKCHAIN_SEEDS }}
          working-directory: './smart-contract'
          
        - name: Instantiate Smart contract
-         run: cargo contract instantiate --constructor new --args 1 --url wss://rococo-contracts-rpc.polkadot.io --suri ${{ secrets.BLOCKCHAIN_SEEDS }}
+         run: cargo contract instantiate --constructor new --args 1 --url 'wss://rococo-contracts-rpc.polkadot.io' --suri ${{ secrets.BLOCKCHAIN_SEEDS }}
          working-directory: './smart-contract'
