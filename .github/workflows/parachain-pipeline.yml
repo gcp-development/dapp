@@ -40,7 +40,13 @@ jobs:
        - name: list
          run: ls -l
          working-directory: './smart-contract'      
-                  
+
+       - name: rust-cargo
+         uses: actions-rs/cargo@v1.0.1
+         with:
+          command: contract upload
+          args: --url 'wss://rococo-contracts-rpc.polkadot.io' --suri ${{ secrets.BLOCKCHAIN_SEEDS }}
+
        - name: Upload Smart contract
          run: cargo contract upload --url 'wss://rococo-contracts-rpc.polkadot.io' --suri ${{ secrets.BLOCKCHAIN_SEEDS }}
          working-directory: './smart-contract'
