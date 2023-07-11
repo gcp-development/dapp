@@ -58,17 +58,19 @@ Note: Get some faucets in [here](https://use.ink/faucet).
 
 Note: Get some faucets in [here](https://discord.com/channels/747361122058764349/885762751241289769).
 
-[Contracts on Rococo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/contracts)
+### [Contracts on Rococo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/contracts)
 
 ![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/1f48efd0-4541-4d62-b7da-e07cf4c9ca20)
 
-IPFS pipeline ([CID](https://docs.ipfs.tech/concepts/content-addressing/))
+### IPFS pipeline ([CID](https://docs.ipfs.tech/concepts/content-addressing/))
 
 ![image](https://github.com/gcp-development/dapp/assets/76512851/6b06e98d-ee5b-4fc4-99ea-ff6c70446235)
 
-Test the [React App](https://crustipfs.live/ipfs/QmfRfiyVWLcMfYheCjbw8mLwTvmrso3djtakYqW6iKAwez/?filename=build)
+### Test the [React App](https://crustipfs.live/ipfs/QmfRfiyVWLcMfYheCjbw8mLwTvmrso3djtakYqW6iKAwez/?filename=build)
 
 ![image](https://github.com/gcp-development/dapp/assets/76512851/b37d6621-f0bd-464f-8e9a-59ebecc93652)
+
+![image](https://github.com/gcp-development/dapp/assets/76512851/e1725be2-5b12-45b4-a1db-012e6ac8d792)
 
 ![image](https://github.com/gcp-development/dapp/assets/76512851/ea90385b-e5d5-40f6-a6ff-f5bf62662eae)
 
