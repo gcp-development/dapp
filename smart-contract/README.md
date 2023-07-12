@@ -107,12 +107,17 @@ For this example we are going to use the Contracts Substrate UI, but before we p
 
 Open the [Contracts Substrate UI](https://contracts-ui.substrate.io/?rpc=wss://rococo-contracts-rpc.polkadot.io)
 
+![image](https://github.com/gcp-development/dapp/assets/76512851/0e7dac56-81cf-4350-9eed-8e32c09b5830)
 
 Upload and Instantiate the Contract
 
+![image](https://github.com/gcp-development/dapp/assets/76512851/f5573009-9f4a-4ae9-85cb-b387a2ed35d6)
 
 Sign the transaction
 
+![image](https://github.com/gcp-development/dapp/assets/76512851/aa94fa8c-aec3-49b4-95d5-e3dc1824a39b)
+
+![image](https://github.com/gcp-development/dapp/assets/76512851/55914f82-7595-4c23-b223-6b4fd2b73671)
 
 References:<br/>
 [ERC-20 implementation](https://github.com/paritytech/ink-examples/tree/main/erc20)<br/>
