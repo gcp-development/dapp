@@ -58,6 +58,12 @@ Note: Get some faucets in [here](https://use.ink/faucet).
 
 Note: Get some faucets in [here](https://discord.com/channels/747361122058764349/885762751241289769).
 
+### Parachain pipeline
+
+![image](https://github.com/gcp-development/dapp/assets/76512851/5d13e875-8f04-4e00-ae26-3e455febb426)
+
+![image](https://github.com/gcp-development/dapp/assets/76512851/7e541f5c-e4d5-425f-b8d6-e0ca34a6fccc)
+
 ### [Contracts on Rococo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/contracts)
 
 ![image](https://github.com/gcp-development/smart-contract-dapp/assets/76512851/1f48efd0-4541-4d62-b7da-e07cf4c9ca20)
