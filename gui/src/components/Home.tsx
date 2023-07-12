@@ -8,7 +8,7 @@ import { InjectedAccountWithMeta } from "@polkadot/extension-inject/types"
 import abi from '../abi/smart_contract.json';
 import "./Home.css";
 
-const CONTRACT_ADDRESS="5HpD2ungSnwz4sXDNSyY7sHNirbQZ3Z1Fimmpg1Poyc25RhB";
+const CONTRACT_ADDRESS="5EHVMdSM1NNfo26xpGS3BHgQDQmN4iLgSPtAXLBTguCiEMBZ";
 const CONTRACT_TRANSFER_AMOUNT=0.0000000000005;
 
 type TransferForm = {
