@@ -23,7 +23,7 @@ jobs:
          uses: Swatinem/rust-cache@v2
          
        - name: Upload Smart contract
-         run: cargo contract upload --suri  ${{ secrets.BLOCKCHAIN_SEEDS }} --verbose
+         run: cargo contract upload --suri  '${{ secrets.BLOCKCHAIN_SEEDS }}' --verbose
          
        - name: list
          run: ls -l         
