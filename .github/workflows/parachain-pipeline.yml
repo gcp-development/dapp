@@ -22,8 +22,25 @@ jobs:
        - name: Cache
          uses: Swatinem/rust-cache@v2
          
-       - name: Upload Smart contract
-         run: cargo contract upload --suri  '${{ secrets.BLOCKCHAIN_SEEDS }}' --verbose
+       - name: Checkout
+         uses: actions/checkout@v3
          
-       - name: list
-         run: ls -l         
+       - name: Run tests
+         run: cargo test
+         working-directory: './smart-contract'
+         
+       - name: Build Release
+         run: cargo contract build --release
+         working-directory: './smart-contract'
+         
+       - name: Contract check
+         run: cargo contract check
+         working-directory: './smart-contract'      
+         
+       - name: Upload Smart contract
+         run: cargo contract upload --url 'wss://rococo-contracts-rpc.polkadot.io' --suri '${{ secrets.BLOCKCHAIN_SEEDS }}'
+         working-directory: './smart-contract'
+         
+       - name: Instantiate Smart contract
+         run: cargo contract instantiate --constructor new --args 1 --url 'wss://rococo-contracts-rpc.polkadot.io' --suri '${{ secrets.BLOCKCHAIN_SEEDS }}'
+         working-directory: './smart-contract'
