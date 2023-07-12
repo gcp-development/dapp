@@ -62,7 +62,18 @@ Note: Get some faucets in [here](https://discord.com/channels/747361122058764349
 
 ![image](https://github.com/gcp-development/dapp/assets/76512851/5d13e875-8f04-4e00-ae26-3e455febb426)
 
+Code hash
+```bash
+0xd652cfaae12daf836f684cb0de3a6eefd1c526972d82831542bad2ee566c8f12"
+```
+
 ![image](https://github.com/gcp-development/dapp/assets/76512851/7e541f5c-e4d5-425f-b8d6-e0ca34a6fccc)
+
+Contract
+
+```bash
+5EHVMdSM1NNfo26xpGS3BHgQDQmN4iLgSPtAXLBTguCiEMBZ
+```
 
 ### [Contracts on Rococo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-contracts-rpc.polkadot.io#/contracts)
 
