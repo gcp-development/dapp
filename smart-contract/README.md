@@ -115,7 +115,7 @@ Upload and Instantiate the Contract
 
 Sign the transaction
 
-![image](https://github.com/gcp-development/dapp/assets/76512851/aa94fa8c-aec3-49b4-95d5-e3dc1824a39b)
+![image](https://github.com/gcp-development/dapp/assets/76512851/c219f87f-2eda-4f31-825d-1989a8422ff9)
 
 ![image](https://github.com/gcp-development/dapp/assets/76512851/55914f82-7595-4c23-b223-6b4fd2b73671)
 
