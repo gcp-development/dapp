@@ -60,14 +60,14 @@ Note: Get some faucets in [here](https://discord.com/channels/747361122058764349
 
 ### Parachain pipeline
 
-![image](https://github.com/gcp-development/dapp/assets/76512851/5d13e875-8f04-4e00-ae26-3e455febb426)
+![image](https://github.com/gcp-development/dapp/assets/76512851/093a8a99-deb8-46e9-84fa-4fab1a4640d6)
 
 Code hash
 ```bash
 0xd652cfaae12daf836f684cb0de3a6eefd1c526972d82831542bad2ee566c8f12"
 ```
 
-![image](https://github.com/gcp-development/dapp/assets/76512851/7e541f5c-e4d5-425f-b8d6-e0ca34a6fccc)
+![image](https://github.com/gcp-development/dapp/assets/76512851/1d8b2ef1-d017-407c-a7a2-dde20f398a29)
 
 Contract
 
