@@ -1,4 +1,4 @@
- # Decentralized Applications (dApps)(Work In progress)
+ # Decentralized Applications (dApps)
  
 ## Motivation
 
