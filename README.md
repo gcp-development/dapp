@@ -98,7 +98,7 @@ QmUTHQLTkdNaUuAQ5T61v35eC5RM48zD4yBw3zjvXxbsoy
 
 ![image](https://github.com/gcp-development/dapp/assets/76512851/fe195e67-9e67-489e-98c5-e0f59416285e)
 
-React app Link
+React app address
 
 ```bash
 https://crustipfs.live/ipfs/QmUTHQLTkdNaUuAQ5T61v35eC5RM48zD4yBw3zjvXxbsoy/?filename=build
